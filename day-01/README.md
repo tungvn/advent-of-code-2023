@@ -1,14 +1,21 @@
 # How to run
 
 ```
-node_modules/.bin/ts-node day-01/index.ts
+node_modules/.bin/ts-node day-01/part-01.ts
+node_modules/.bin/ts-node day-01/part-02.ts
 ```
 
 # Result
 
 <details>
-<summary>Open to see result</summary>
+<summary>Part 01</summary>
 
 54953
+</details>
+
+<details>
+<summary>Part 02</summary>
+
+53868
 </details>
 

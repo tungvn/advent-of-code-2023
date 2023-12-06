@@ -1,4 +1,4 @@
-const inputs = `9cbncbxclbvkmfzdnldc
+export const inputs = `9cbncbxclbvkmfzdnldc
 jjn1drdffhs
 3six7
 38rgtnqqxtc
@@ -998,24 +998,3 @@ lkrjlsz7mgv9525p1
 nineonebmfdxxfqvvkrblrd9
 5six6cvmqttbsxkzg
 42seven13four4`
-
-const getCalibrationValue = (str: string) => {
-  let firstValue: number | undefined
-  let lastValue: number | undefined
-  for (let i = 0; i < str.length; i++) {
-    if (!isNaN(+str[i])) {
-      if (firstValue === undefined) {
-        firstValue = parseInt(str[i])
-      }
-      lastValue = parseInt(str[i])
-    }
-  }
-
-  return firstValue! * 10 + lastValue!
-}
-
-const result = inputs.split('\n').reduce(function (sum, str) {
-  return sum += getCalibrationValue(str)
-}, 0)
-
-console.log(result)
