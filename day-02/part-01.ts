@@ -1,5 +1,5 @@
 import { input } from "./inputs"
-import { extractGameData } from "./lib"
+import { extractGameData, extractMaximumGameData } from "./lib"
 
 const games = input.split('\n').map((value) => {
   return extractGameData(value)
@@ -11,7 +11,8 @@ const POSSIBLE_GAME = {
   red: 12
 }
 
-const result = games.reduce((sum, [index, game]) => {
+const result = games.reduce((sum, [index, games]) => {
+  const game = extractMaximumGameData(games)
   if (game.blue <= POSSIBLE_GAME.blue && game.green <= POSSIBLE_GAME.green && game.red <= POSSIBLE_GAME.red) {
     return sum + index
   }
